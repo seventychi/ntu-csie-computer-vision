@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Drawing;
-using System.Globalization;
 using System.IO;
-using System.Linq;
 
 namespace Hw4
 {
@@ -12,27 +9,27 @@ namespace Hw4
     {
         private static readonly List<Point> Octagon = new List<Point>
         {
-            new Point(-2,-1),
+            new Point(-2, -1),
             new Point(-2, 0),
             new Point(-2, 1),
-            new Point(-1,-2),
-            new Point(-1,-1),
+            new Point(-1, -2),
+            new Point(-1, -1),
             new Point(-1, 0),
             new Point(-1, 1),
             new Point(-1, 2),
-            new Point( 0,-2),
-            new Point( 0,-1),
-            new Point( 0, 0),
-            new Point( 0, 1),
-            new Point( 0, 2),
-            new Point( 1,-2),
-            new Point( 1,-1),
-            new Point( 1, 0),
-            new Point( 1, 1),
-            new Point( 1, 2),
-            new Point( 2,-1),
-            new Point( 2, 0),
-            new Point( 2, 1)
+            new Point(0, -2),
+            new Point(0, -1),
+            new Point(0, 0),
+            new Point(0, 1),
+            new Point(0, 2),
+            new Point(1, -2),
+            new Point(1, -1),
+            new Point(1, 0),
+            new Point(1, 1),
+            new Point(1, 2),
+            new Point(2, -1),
+            new Point(2, 0),
+            new Point(2, 1)
         };
 
         private static readonly List<Point> L1 = new List<Point>
@@ -84,22 +81,18 @@ namespace Hw4
             var result = new Bitmap(srcImg);
 
             for (var x = 0; x < srcImg.Width; x++)
+            for (var y = 0; y < srcImg.Height; y++)
             {
-                for (var y = 0; y < srcImg.Height; y++)
+                // 判斷是否為白色
+                if (srcImg.GetPixel(x, y).R != 255) continue;
+
+                foreach (var point in kernel)
                 {
-                    // 判斷是否為白色
-                    if (srcImg.GetPixel(x, y).R != 255) continue;
+                    var px = x + point.X;
+                    var py = y + point.Y;
 
-                    foreach (var point in kernel)
-                    {
-                        var px = x + point.X;
-                        var py = y + point.Y;
-
-                        if (px >= 0 && px < srcImg.Width && py >= 0 && py < srcImg.Height)
-                        {
-                            result.SetPixel(px, py, Color.White);
-                        }
-                    }
+                    if (px >= 0 && px < srcImg.Width && py >= 0 && py < srcImg.Height)
+                        result.SetPixel(px, py, Color.White);
                 }
             }
 
@@ -117,30 +110,28 @@ namespace Hw4
             var result = CreateBlankBitmap(srcImg.Width, srcImg.Height);
 
             for (var x = 0; x < srcImg.Width; x++)
+            for (var y = 0; y < srcImg.Height; y++)
             {
-                for (var y = 0; y < srcImg.Height; y++)
+                var contained = true;
+
+                foreach (var point in kernel)
                 {
-                    var contained = true;
+                    var px = x + point.X;
+                    var py = y + point.Y;
 
-                    foreach (var point in kernel)
+                    if (px < 0 ||
+                        px >= srcImg.Width ||
+                        py < 0 ||
+                        py >= srcImg.Height ||
+                        srcImg.GetPixel(px, py).R != 255)
                     {
-                        var px = x + point.X;
-                        var py = y + point.Y;
-
-                        if (px < 0 || 
-                            px >= srcImg.Width || 
-                            py < 0 || 
-                            py >= srcImg.Height ||
-                            srcImg.GetPixel(px, py).R != 255)
-                        {
-                            contained = false;
-                            break;
-                        }
+                        contained = false;
+                        break;
                     }
-
-                    if(contained)
-                        result.SetPixel(x, y, Color.White);
                 }
+
+                if (contained)
+                    result.SetPixel(x, y, Color.White);
             }
 
             return result;
@@ -177,28 +168,18 @@ namespace Hw4
         {
             var result = CreateBlankBitmap(srcImg.Width, srcImg.Height);
             var cmpImg = new Bitmap(srcImg);
-            
+
             for (var x = 0; x < srcImg.Width; x++)
-            {
-                for (var y = 0; y < srcImg.Height; y++)
-                {
-                    cmpImg.SetPixel(x, y, srcImg.GetPixel(x, y).R == 255 ? Color.Black : Color.White);
-                }
-            }
+            for (var y = 0; y < srcImg.Height; y++)
+                cmpImg.SetPixel(x, y, srcImg.GetPixel(x, y).R == 255 ? Color.Black : Color.White);
 
             var e1 = GetErosionBitmap(srcImg, L1);
             var e2 = GetErosionBitmap(cmpImg, L2);
 
             for (var x = 0; x < srcImg.Width; x++)
-            {
-                for (var y = 0; y < srcImg.Height; y++)
-                {
-                    if (e1.GetPixel(x, y).R == 255 && e2.GetPixel(x, y).R == 255)
-                    {
-                        result.SetPixel(x, y, Color.White);
-                    }
-                }
-            }
+            for (var y = 0; y < srcImg.Height; y++)
+                if (e1.GetPixel(x, y).R == 255 && e2.GetPixel(x, y).R == 255)
+                    result.SetPixel(x, y, Color.White);
 
             return result;
         }
@@ -241,12 +222,8 @@ namespace Hw4
             var img = new Bitmap(width, height);
 
             for (var x = 0; x < width; x++)
-            {
-                for (var y = 0; y < height; y++)
-                {
-                    img.SetPixel(x, y, Color.Black);
-                }
-            }
+            for (var y = 0; y < height; y++)
+                img.SetPixel(x, y, Color.Black);
 
             return img;
         }
