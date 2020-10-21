@@ -180,11 +180,6 @@ private static Bitmap GetHitAndMissBitmap(Bitmap srcImg)
 ```
 
 ## 結果圖片
-| (A). <img src="\Hw4\bin\Debug\netcoreapp3.1\answers\a.bmp" alt="a-1" style="zoom:50%;" /> | (B). <img src="\Hw4\bin\Debug\netcoreapp3.1\answers\b.bmp" alt="b-1" style="zoom:50%;" /> | (C). <img src="\Hw4\bin\Debug\netcoreapp3.1\answers\c.bmp" alt="c-1" style="zoom:50%;" /> |
+| (A). <img src="\Answers\a.bmp" style="zoom:50%;" /> | (B). <img src="\Answers\b.bmp" style="zoom:50%;" /> | (C). <img src="\Answers\c.bmp" style="zoom:50%;" /> |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| (D).<img src="\Hw4\bin\Debug\netcoreapp3.1\answers\d.bmp" alt="a-2" style="zoom:50%;" /> | (E).<img src="\Hw4\bin\Debug\netcoreapp3.1\answers\e.bmp" alt="b-2" style="zoom:50%;" /> |                                                              |
-
-
-
-
-
+| (D).<img src="\Answers\d.bmp" style="zoom:50%;" /> | (E).<img src="\Answers\e.bmp" style="zoom:50%;" /> |                                                              |
