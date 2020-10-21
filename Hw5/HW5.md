@@ -134,9 +134,9 @@ private static Bitmap GetGrayClosingBitmap(Bitmap srcImg, IList<Point> kernel)
 ```
 
 ## 結果圖片
-| (A). <img src="https://raw.githubusercontent.com/seventychi/ntu-csie-computer-vision/main/Hw5/Answers/a.bmp" style="zoom:50%;" /> | (B). <img src="https://raw.githubusercontent.com/seventychi/ntu-csie-computer-vision/main/Hw5/Answers/b.bmp" style="zoom:50%;" /> | (C). <img src="https://raw.githubusercontent.com/seventychi/ntu-csie-computer-vision/main/Hw5/Answers/c.bmp" style="zoom:50%;" /> |
+| (A). <img src="https://raw.githubusercontent.com/seventychi/ntu-csie-computer-vision/main/Hw5/Answers/a.png" style="zoom:50%;" /> | (B). <img src="https://raw.githubusercontent.com/seventychi/ntu-csie-computer-vision/main/Hw5/Answers/b.png" style="zoom:50%;" /> | (C). <img src="https://raw.githubusercontent.com/seventychi/ntu-csie-computer-vision/main/Hw5/Answers/c.png" style="zoom:50%;" /> |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| (D).<img src="https://raw.githubusercontent.com/seventychi/ntu-csie-computer-vision/main/Hw5/Answers/d.bmp" style="zoom:50%;" /> |                                                              |                                                              |
+| (D).<img src="https://raw.githubusercontent.com/seventychi/ntu-csie-computer-vision/main/Hw5/Answers/d.png" style="zoom:50%;" /> |                                                              |                                                              |
 
 
 
