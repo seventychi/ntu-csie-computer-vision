@@ -180,6 +180,11 @@ private static Bitmap GetHitAndMissBitmap(Bitmap srcImg)
 ```
 
 ## 結果圖片
-| (A). <img src="\Answers\a.bmp" style="zoom:50%;" /> | (B). <img src="\Answers\b.bmp" style="zoom:50%;" /> | (C). <img src="\Answers\c.bmp" style="zoom:50%;" /> |
+| (A). <img src="https://raw.githubusercontent.com/seventychi/ntu-csie-computer-vision/main/Hw4/Answers/a.bmp" style="zoom:50%;" /> | (B). <img src="https://raw.githubusercontent.com/seventychi/ntu-csie-computer-vision/main/Hw4/Answers/b.bmp" style="zoom:50%;" /> | (C). <img src="https://raw.githubusercontent.com/seventychi/ntu-csie-computer-vision/main/Hw4/Answers/c.bmp" style="zoom:50%;" /> |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| (D).<img src="\Answers\d.bmp" style="zoom:50%;" /> | (E).<img src="\Answers\e.bmp" style="zoom:50%;" /> |                                                              |
+| (D).<img src="https://raw.githubusercontent.com/seventychi/ntu-csie-computer-vision/main/Hw4/Answers/d.bmp" style="zoom:50%;" /> | (E).<img src="https://raw.githubusercontent.com/seventychi/ntu-csie-computer-vision/main/Hw4/Answers/e.bmp" style="zoom:50%;" /> |                                                              |
+
+
+
+
+
