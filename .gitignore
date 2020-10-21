@@ -1,12 +1,6 @@
 
-Hw4/.vs/
+*/.vs/
 
-Hw4/Hw4/bin/
+*/*/bin/
 
-Hw4/Hw4/obj/
-
-Hw5/.vs/
-
-Hw5/Hw5/bin/
-
-Hw5/Hw5/obj/
+*/*/obj/
