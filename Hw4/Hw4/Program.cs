@@ -62,7 +62,7 @@ namespace Hw4
                 GetClosingBitmap(binaryBitmap, Octagon)?.Save(@"answers\d.bmp");
                 GetHitAndMissBitmap(binaryBitmap)?.Save(@"answers\e.bmp");
 
-                Console.WriteLine("Histogram Equalization complete...");
+                Console.WriteLine("complete...");
             }
             catch (Exception ex)
             {

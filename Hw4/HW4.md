@@ -50,7 +50,7 @@ private static Bitmap GetDilationBitmap(Bitmap srcImg, IList<Point> kernel)
     return result;
 }
 ```
-(B). Euosion: 傳入 Binary Image 跟 Octagon kernel，藉由迴圈判斷 Kernel 區域內是否存在且皆為白色，若是則將 Pixel 值更新為白色。
+(B). Erosion: 傳入 Binary Image 跟 Octagon kernel，藉由迴圈判斷 Kernel 區域內是否存在且皆為白色，若是則將 Pixel 值更新為白色。
 
 ```c#
 /// <summary>
