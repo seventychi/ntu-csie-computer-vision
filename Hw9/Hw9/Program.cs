@@ -207,7 +207,7 @@ namespace Hw9
 
                     var kList = new List<int>();
 
-                    // 計算 k0 ~ k8 的值
+                    // 計算 k0 ~ k7 的值
                     var k0 = -3 * srcImg.GetPixel(x0, y0).R - 3 * srcImg.GetPixel(x1, y0).R +
                              5 * srcImg.GetPixel(x2, y0).R
                              - 3 * srcImg.GetPixel(x0, y1).R + 5 * srcImg.GetPixel(x2, y1).R
